@@ -49,7 +49,14 @@ async function loadTasks() {
     }
 
     const tasks = await response.json();
+
+    renderTasks(tasks);
+
     return tasks;
+}
+
+function renderTasks(tasksToRender) {
+    //html
 }
 
 //Check for existing excel file on server
