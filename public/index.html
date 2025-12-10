@@ -10,14 +10,81 @@
 </head>
 
 <body>
-    <header></header>
+    <header>
+        <img src="/public/img/logo.svg" alt="hjemmeværnets logo">
+    </header>
     <main>
         <h1>Opgaver</h1>
         <div class="greenLine"></div>
         <div id="contentContainer">
-            <div id="settingsContainer">
-                <input type="file" id="fileInput">
-            </div>
+            
+            <aside id="settingsContainer">
+                
+                <form class="toolbar">
+
+                    <!-- SEARCH -->
+                    <div class="search-group">
+                        <input type="search" placeholder="Søg…" name="q">
+                    </div>
+
+                    <!-- FILTER (Type) -->
+                    <fieldset class="filter-group">
+                        <legend>Type</legend>
+
+                        <label>
+                        <input type="checkbox" name="type" value="land">
+                        Land
+                        </label>
+
+                        <label>
+                        <input type="checkbox" name="type" value="sø">
+                        Sø
+                        </label>
+                    </fieldset>
+
+                    <!-- SORTERING -->
+                    <fieldset class="sort-group">
+                        <legend>
+                            Sortering 
+                            <button class="sort-toggle">V</button> <!--TOGGLE IKON I STEDET FOR 'V'-->
+                        </legend>
+
+                        <div class="sort-dropdown">
+                            <label>
+                                <input type="radio" name="sort" value="ældste">
+                                Ældste først
+                            </label>
+
+                            <label>
+                                <input type="radio" name="sort" value="nyeste" checked>
+                                Nyeste først
+                            </label>
+                        </div>
+                        
+                    </fieldset>
+
+                    <!-- FILE BUTTONS -->
+                    <div class="file-group">
+
+                        <!-- Upload -->
+                        <div class="btn-info-container">
+                            <label class="file-button">
+                            Upload opgaver
+                            <input type="file" id="fileInput" hidden>
+                            </label>
+                            <button class="info-btn" aria-label="Info om upload">?</button>
+                        </div>
+
+                        <!-- Download -->
+                         <div class="btn-info-container">
+                            <button type="button" class="file-button">Download opgaver</button>
+                            <button class="info-btn" aria-label="Info om download">?</button>
+                         </div>
+                        
+                    </div>
+                </form>
+
+            </aside>
             <div id="tasksContainer">
 
                 <!-- STANDARD LANDING PAGE -->
