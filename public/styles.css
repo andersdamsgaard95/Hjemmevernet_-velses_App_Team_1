@@ -1,0 +1,31 @@
+main {
+  margin: 100px 200px;
+}
+
+.greenLine {
+  width: 100%;
+  height: 15px;
+  background-color: #3F5C59;
+}
+
+#contentContainer {
+  display: flex;
+}
+#contentContainer #settingsContainer {
+  background-color: #FAFAFA;
+}
+#contentContainer #tasksContainer {
+  flex: 1;
+}
+#contentContainer #tasksContainer #standardLandingPage {
+  display: none;
+}
+
+#askToMergeOrReplacePopUp {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: orange;
+}/*# sourceMappingURL=styles.css.map */
