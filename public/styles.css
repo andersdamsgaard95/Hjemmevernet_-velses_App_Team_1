@@ -50,6 +50,8 @@ main {
   padding-left: 15px;
   padding-top: 20px;
   padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
 }
 #contentContainer #tasksContainer {
   flex: 1;
@@ -74,6 +76,14 @@ main {
   display: flex;
   flex-direction: column;
   gap: 30px;
+  background-color: gold;
+}
+
+.search-filter-sort-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  background-color: purple;
 }
 
 /* SEARCH */
@@ -105,12 +115,26 @@ legend {
   margin-bottom: 5px;
 }
 
+.legend-group {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
 /* CHECKBOXES / RADIO BUTTONS */
 .sort-toggle {
+  padding: 0;
+  background: none;
   width: 2rem;
   height: 2rem;
   border: none;
-  background: none;
+}
+
+.sort-toggle img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .sort-group {
@@ -158,15 +182,20 @@ label {
 
 /* INFO-KNAPPER */
 .info-btn {
-  width: 22px;
-  height: 22px;
+  width: 2.5rem;
+  height: 2.5rem;
   border-radius: 50%;
   border: none;
   background: black;
   color: white;
   cursor: help;
-  font-weight: bold;
+  font-weight: 600;
   margin-left: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.4rem;
+  font-family: Verdana, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 .info-btn:hover::after {
@@ -204,11 +233,14 @@ label {
   }
   #contentContainer {
     flex-direction: column;
+    background-color: yellow;
   }
   #contentContainer #settingsContainer {
     background-color: green;
-    max-width: 100%;
+    width: 100%;
     padding-right: 0;
+    padding-left: 0;
+    flex-direction: row;
   }
   #contentContainer #tasksContainer #standardLandingPage {
     padding-left: 0;

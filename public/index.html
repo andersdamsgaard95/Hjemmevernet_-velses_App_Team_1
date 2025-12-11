@@ -11,7 +11,7 @@
 
 <body>
     <header>
-        <img src="public/img/logo.svg" alt="hjemmeværnets logo">
+        <img src="img/logo.svg" alt="hjemmeværnets logo">
     </header>
     <main>
         <h1>Opgaver</h1>
@@ -21,47 +21,51 @@
             <aside id="settingsContainer">
 
                 <form class="toolbar">
-
-                    <!-- SEARCH -->
-                    <div class="search-group">
-                        <input type="search" placeholder="Søg…" name="q">
-                    </div>
-
-                    <!-- FILTER (Type) -->
-                    <fieldset class="filter-group">
-                        <legend>Type</legend>
-
-                        <label>
-                            <input type="checkbox" name="type" value="land">
-                            Land
-                        </label>
-
-                        <label>
-                            <input type="checkbox" name="type" value="sø">
-                            Sø
-                        </label>
-                    </fieldset>
-
-                    <!-- SORTERING -->
-                    <fieldset class="sort-group">
-                        <legend>
-                            Sortering
-                            <button class="sort-toggle">V</button> <!--TOGGLE IKON I STEDET FOR 'V'-->
-                        </legend>
-
-                        <div class="sort-dropdown">
-                            <label>
-                                <input type="radio" name="sort" value="ældste">
-                                Ældste først
-                            </label>
-
-                            <label>
-                                <input type="radio" name="sort" value="nyeste" checked>
-                                Nyeste først
-                            </label>
+                    <div class="search-filter-sort-wrapper">
+                        <!-- SEARCH -->
+                        <div class="search-group">
+                            <input type="search" placeholder="Søg…" name="q">
                         </div>
 
-                    </fieldset>
+                        <!-- FILTER (Type) -->
+                        <fieldset class="filter-group">
+                            <legend>Type</legend>
+
+                            <label>
+                                <input type="checkbox" name="type" value="land">
+                                Land
+                            </label>
+
+                            <label>
+                                <input type="checkbox" name="type" value="sø">
+                                Sø
+                            </label>
+                        </fieldset>
+
+                        <!-- SORTERING -->
+                        <fieldset class="sort-group">
+                            <legend class="legend-group">
+                                Sortering
+                                <button class="sort-toggle"><img src="img/chevron.svg" alt="sorterings-menu åben/luk ikon"></button>
+                            </legend>
+                            
+
+                            <div class="sort-dropdown">
+                                <label>
+                                    <input type="radio" name="sort" value="ældste">
+                                    Ældste først
+                                </label>
+
+                                <label>
+                                    <input type="radio" name="sort" value="nyeste" checked>
+                                    Nyeste først
+                                </label>
+                            </div>
+
+                        </fieldset>
+                    </div>
+
+                    
 
                     <!-- FILE BUTTONS -->
                     <div class="file-group">
@@ -72,7 +76,7 @@
                                 Upload opgaver
                                 <input type="file" id="fileInput" hidden>
                             </label>
-                            <button class="info-btn" aria-label="Info om upload">?</button>
+                            <div class="info-btn" aria-label="Info om upload">?</div>
                         </div>
 
                         <!-- Download -->
@@ -94,6 +98,11 @@
                 </div>
 
                 <div id="renderedTasks"></div>
+                <div id="newTask">
+                    <div></div>
+                    <button>Tilføj</button>
+                    <button>Gem</button>
+                </div>
             </div>
         </div>
 
