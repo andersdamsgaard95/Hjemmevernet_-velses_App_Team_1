@@ -11,15 +11,15 @@
 
 <body>
     <header>
-        <img src="/public/img/logo.svg" alt="hjemmeværnets logo">
+        <img src="public/img/logo.svg" alt="hjemmeværnets logo">
     </header>
     <main>
         <h1>Opgaver</h1>
         <div class="greenLine"></div>
         <div id="contentContainer">
-            
+
             <aside id="settingsContainer">
-                
+
                 <form class="toolbar">
 
                     <!-- SEARCH -->
@@ -32,20 +32,20 @@
                         <legend>Type</legend>
 
                         <label>
-                        <input type="checkbox" name="type" value="land">
-                        Land
+                            <input type="checkbox" name="type" value="land">
+                            Land
                         </label>
 
                         <label>
-                        <input type="checkbox" name="type" value="sø">
-                        Sø
+                            <input type="checkbox" name="type" value="sø">
+                            Sø
                         </label>
                     </fieldset>
 
                     <!-- SORTERING -->
                     <fieldset class="sort-group">
                         <legend>
-                            Sortering 
+                            Sortering
                             <button class="sort-toggle">V</button> <!--TOGGLE IKON I STEDET FOR 'V'-->
                         </legend>
 
@@ -60,7 +60,7 @@
                                 Nyeste først
                             </label>
                         </div>
-                        
+
                     </fieldset>
 
                     <!-- FILE BUTTONS -->
@@ -69,18 +69,18 @@
                         <!-- Upload -->
                         <div class="btn-info-container">
                             <label class="file-button">
-                            Upload opgaver
-                            <input type="file" id="fileInput" hidden>
+                                Upload opgaver
+                                <input type="file" id="fileInput" hidden>
                             </label>
                             <button class="info-btn" aria-label="Info om upload">?</button>
                         </div>
 
                         <!-- Download -->
-                         <div class="btn-info-container">
+                        <div class="btn-info-container">
                             <button type="button" class="file-button">Download opgaver</button>
-                            <button class="info-btn" aria-label="Info om download">?</button>
-                         </div>
-                        
+                            <div class="info-btn" aria-label="Info om download">?</div>
+                        </div>
+
                     </div>
                 </form>
 
@@ -92,6 +92,8 @@
                     <p>Ingen opgaver tilføjet</p>
                     <button id="downloadTemplateButton">download excel skabelon til opgaver</button>
                 </div>
+
+                <div id="renderedTasks"></div>
             </div>
         </div>
 

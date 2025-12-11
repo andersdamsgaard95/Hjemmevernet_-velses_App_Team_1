@@ -52,7 +52,7 @@ async function loadTasks() {
 
     renderTasks(tasks);
 
-    return tasks;
+    //return tasks;
 }
 
 function renderTasks(tasksToRender) {
